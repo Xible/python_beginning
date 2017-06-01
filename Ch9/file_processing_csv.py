@@ -13,5 +13,6 @@ def main():
         for row in csv.reader(file):
             print(row)
 
+
 if __name__ == '__main__':
     main()
