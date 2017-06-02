@@ -12,8 +12,8 @@ class WeatherAnalyzer:
         self.data = {}
         self.location_rainfall_list = {}
 
-    def load_json(self, input_file):
-        jsonFile = open(input_file, encoding='utf8')
+    def load_json(self, ):
+        jsonFile = open('input\weather_data.json')
         self.data = json.load(jsonFile)
         jsonFile.close()
 
@@ -53,13 +53,9 @@ class WeatherAnalyzer:
 
 
 def main():
-    try:
-        input_file = sys.argv[1]
-    except IndexError as e:
-        print("[Usage] python WeatherAnalyzer.py input\\Weather_data.json")
-        return
+    
     analyzer = WeatherAnalyzer()
-    analyzer.load_json(input_file)
+    analyzer.load_json()
     analyzer.analyze_data()
 
 if __name__ == '__main__':
