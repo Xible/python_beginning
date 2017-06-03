@@ -1,0 +1,49 @@
+{
+    "Taipei":[
+        {
+            "time": "2017-05-29 05:10",
+            "rainfall": "0.0",
+            "temperature": "25.2"
+        },
+        {
+            "time": "2017-05-30 05:10",
+            "rainfall": "0.1",
+            "temperature": "25.2"
+        },
+        {
+            "time": "2017-05-31 05:10",
+            "rainfall": "1.0",
+            "temperature": "25.2"
+        },
+        {
+            "time": "2017-06-01 05:10",
+            "rainfall": "1.0",
+            "temperature": "25.2"
+        }
+
+    ],
+
+    "Taichung":[
+        {
+            "time": "2017-05-29 05:10",
+            "rainfall": "1.0",
+            "temperature": "25.2"
+        },
+        {
+            "time": "2017-05-30 05:10",
+            "rainfall": "1.1",
+            "temperature": "25.2"
+        },
+        {
+            "time": "2017-06-01 24:10",
+            "rainfall": "1.0",
+            "temperature": "25.2"
+        }
+    ],
+    "Nantou":[{
+            "time": "2017-06-01 05:10",
+            "rainfall": "1.0",
+            "temperature": "25.2"
+        }
+    ]
+}
