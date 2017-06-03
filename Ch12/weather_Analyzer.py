@@ -12,7 +12,7 @@ class WeatherAnalyzer:
         self.data = {}
         self.location_rainfall_list = {}
 
-    def load_json(self, ):
+    def load_json(self ):
         jsonFile = open('input\weather_data.json')
         self.data = json.load(jsonFile)
         jsonFile.close()
@@ -46,7 +46,7 @@ class WeatherAnalyzer:
             dt = datetime.strptime(time, time_format)
             return dt
         except ValueError as e:
-            time = time.replace('24','23')
+            time = time.replace('24:','23:')#將時間字串中的24:取代成23:，不加:會將日期中的24取代成23
             dt = datetime.strptime(time, time_format)
             dt += timedelta(hours = 1)
             return dt
