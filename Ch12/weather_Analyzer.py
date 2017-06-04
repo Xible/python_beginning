@@ -42,10 +42,6 @@ class WeatherAnalyzer:
 
     def parse_time(self, time):         #接收來自self.data裡的time key
 
-
-
-
-
         time_format = '%Y-%m-%d %H:%M'  #定義時間格式
         try:
             dt = datetime.strptime(time, time_format)   #將接收到的time字串轉換成時間格式
@@ -56,7 +52,7 @@ class WeatherAnalyzer:
             dt += timedelta(hours = 1)          #因為之前有將時間減1，故在這邊要將時間加回去
             return dt
 
-    def plot_rainfall(self):
+    def plot_rainfall(self):                    #用來繪製報表圖例
         a_group = 12 
         #用來產生12個值得參數
         #index = [ 0  1  2  3  4  5  6  7  8  9 10 11]
@@ -76,10 +72,8 @@ class WeatherAnalyzer:
         plt.bar(left = index + bar_width, height=tuple(self.location_rainfall_list['Kaohsiung'])
             , width =bar_width, align='center', color='r', label='Kaohsiung', alpha=opacity)
 
-       
-
-        plt.legend()
-        plt.show()
+        plt.legend()        #用來顯示長條副標(用bar裡面的color 以及 label來繪製)
+        plt.show()          #顯示報表圖
 
 
 def main():
