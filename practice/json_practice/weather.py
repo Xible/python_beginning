@@ -16,11 +16,28 @@ class Weather:
             print(location)
             self.location_rainfall_list[location] = []
             month_rainfall = 0.0
-            current_month = 9
+            current_month = 5
 
             for hour in self.data[location]:
                 dt = self.parse_time(hour['time']) #將hour['time']傳到parse_time中
-                print (dt.hour)
+
+                if dt.month == current_month:
+                    if hour['rainfall'] == "T":
+                        continue
+                    month_rainfall += float(hour['rainfall'])
+
+                else:
+                    self.location_rainfall_list[location].append(month_rainfall) 
+                    #在月份轉換時將上次月份的統計資料加進list最後一筆，但是會使得list中最後一個月份的統計資料會無法加進去
+                    current_month += 1
+                    if current_month > 12:
+                        current_month -= 12
+                    month_rainfall = 0
+                    if hour['rainfall'] == 'T':
+                        continue
+
+                    month_rainfall += float(hour['rainfall'])
+            print(self.location_rainfall_list[location])
 
 
     def parse_time(self,time):          #接收來自self.data裡的time key

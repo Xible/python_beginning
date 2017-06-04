@@ -19,6 +19,11 @@
             "time": "2017-06-01 05:10",
             "rainfall": "1.0",
             "temperature": "25.2"
+        },
+        {
+            "time": "2017-07-01 05:10",
+            "rainfall": "1.0",
+            "temperature": "25.2"
         }
 
     ],
