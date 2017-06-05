@@ -2,7 +2,7 @@
 電腦需先pip install lxml、html5lib、pandas、beautifulsoup4、openpyxl才行
 '''
 
-
+from datetime import datetime
 import pandas 
 
 def search():
@@ -19,8 +19,9 @@ def search():
 
 
 def main():
-    
-    search().to_excel('currency.xlsx') #將爬下來的資料存成xlsx檔
+    dt = datetime.now().strftime("%Y-%m-%d")
+    print(type(dt))
+    search().to_excel(dt+'.xlsx') #將爬下來的資料存成xlsx檔
 
 
    
