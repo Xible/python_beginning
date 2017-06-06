@@ -21,7 +21,7 @@ def search():
 def main():
     dt = datetime.now().strftime("%Y-%m-%d")
     print(type(dt))
-    search().to_excel(dt+'.xlsx') #將爬下來的資料存成xlsx檔
+    search().to_excel(dt+'.xlsx') #將爬下來的資料依照日期存成xlsx檔
 
 
    
